@@ -1,0 +1,160 @@
+/*body is the flex/grid container, since everything is already located in the body*/
+
+header{
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    background-color:rgb(0, 0, 0);
+    color:white;
+    text-align: left;
+    font-family: 'arial';
+    
+}
+
+h1{
+    padding-bottom: 30px;
+    border-bottom-style:outset;
+    color:rgb(173, 247, 247);
+}
+
+h2{
+    color:rgb(173, 247, 247);
+}
+
+h3{
+    color:rgb(173, 247, 247);
+}
+
+p{
+    line-height: 1.3;
+}
+
+.para{
+    text-indent:30px;
+}
+
+#ytlink:link, #ytlink:visited{
+    background-color: #e71607;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left:7px;
+}
+
+#ytlink:hover, #ytlink:active {
+    background-color: rgb(255, 130, 130);
+}
+
+nav ul{
+    list-style-type: none;
+    padding:50px;
+    background-color: rgb(36, 37, 50);
+    border: 1px rgb(36, 37, 50);
+    border-radius: 11px;
+}
+
+nav li{
+    font-weight:bold;
+    color: rgb(173, 247, 247);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 1px;
+}
+
+nav a:link, nav a:visited{
+    text-decoration:none;
+    color: rgb(173, 247, 247);
+}
+
+nav a:hover{
+    color:rgb(95, 141, 183);
+}
+
+  /*Tablet Screens*/
+@media (min-width: 600px) {
+    
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+  
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    .main-content {
+        grid-area: main;
+    }
+
+    article {
+        grid-area: sidebar;
+    }
+
+    .lab3 {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    body{
+        margin:50px;
+        display: grid;
+        grid-template: 
+            "header header"
+            "nav nav"
+            "main main"
+            "footer footer"
+            
+    }
+}
+
+
+
+
+
+ /*Desktop Screens*/
+@media (min-width: 1024px) {
+
+    nav{
+        background-color:rgb(36, 37, 50);
+        border: 2px rgb(36, 37, 50);
+        border-radius: 22px;
+        margin-right:20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items:center;
+        gap:5px;
+      }
+
+    body{
+        margin-right:20%;
+        display: grid;
+        grid-template:
+          "header header header"
+          "nav    main   aside"
+          "footer footer footer"
+          
+    }
+
+}
