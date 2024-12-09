@@ -1,0 +1,180 @@
+body{
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    height: 100vh;
+
+    padding:50px;
+
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size:large;
+    color:aliceblue;
+    text-shadow:
+    -2px -2px 0 #000,
+     0   -2px 0 #000,
+     2px -2px 0 #000,
+     2px  0   0 #000,
+     2px  2px 0 #000,
+     0    2px 0 #000,
+    -2px  2px 0 #000,
+    -2px  0   0 #000;
+}
+
+#navbar {
+    display:block;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.596);
+    border:2px solid rgba(0, 0, 0, 0.596);
+    font-size: small;
+
+    text-shadow:none;
+}
+
+#navbar .hamburger{
+    display: none;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color:aliceblue;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+.cell:hover, .active:hover{
+    background-color:rgb(222, 202, 255);
+  }
+
+.cell, .active {
+    border-right:2px solid black;
+    background-color: rgb(201, 167, 255);
+  }
+
+.active {
+    background-color: rgb(217, 198, 250);
+}
+
+table {
+    border:1px solid black;
+    width:95%;
+    border-collapse:collapse;
+    text-shadow:none;
+    color:#000;
+}
+
+th, td {
+    text-align:center;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(236, 236, 255)
+}
+
+th, tr{
+    background-color: rgb(216, 211, 255);
+}
+
+p{
+    font-weight: bold;
+}
+
+ol{
+    text-align: center;
+    list-style-position:inside;
+}
+
+.link{
+    color:aliceblue;
+}
+
+.link:hover{
+    color:#eec3ff
+}
+
+.image{
+    width:100%;
+    height:auto;
+    max-width: 1300px;
+    background-color:white ;
+    padding:3px;
+    border-radius: 5px;;
+}
+
+div.three {
+    border: 1px solid #ccc;
+}
+
+div.three img {
+    width:100%;
+    height:27vh;
+}
+
+.gallery{
+    float:left;
+    width: 33%;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.two{
+    display:flex;
+}
+
+.twoColumn{
+    flex:25%;
+    padding:5px;
+}
+
+.two img{
+    width:100%;
+    height:auto;
+    background-size: cover;
+}
+
+
+footer{
+    margin-top:100px;
+    padding-bottom:35px;
+}
+
+@media (max-width: 800px){
+    body{
+        background-position-x:center;
+        background-size:cover;
+        height:100vh;
+    }
+
+   #navbar, #topNav, #bottomNav, #bottomNav2{
+        display:grid;
+   } 
+
+    #navbar .hamburger{
+        display:block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgb(194, 128, 255);
+    }
+
+    #navbar #bottomNav, #navbar #bottomNav2{
+        display:none;
+    }
+
+    #cell{
+        border-bottom: 1px solid rgba(16, 11, 11, 0.314);
+    }
+
+    .lessons{
+        background-color: #32323254;
+        padding-bottom:50px;
+        padding-top:10px;
+    }
+}
